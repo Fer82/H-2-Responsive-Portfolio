@@ -84,9 +84,13 @@ main {
 
 /* external css: flickity.css */
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
-body { font-family: sans-serif; }
+body {
+  font-family: sans-serif;
+}
 
 .carousel {
   background: black;
@@ -98,12 +102,12 @@ body { font-family: sans-serif; }
   /* flex-box, center image in cell */
   display: -webkit-box;
   display: -webkit-flex;
-  display:         flex;
+  display: flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
-          justify-content: center;
+  justify-content: center;
   -webkit-align-items: center;
-          align-items: center;
+  align-items: center;
 }
 
 .carousel-cell img {
@@ -113,23 +117,57 @@ body { font-family: sans-serif; }
   /* dim unselected */
   opacity: 0.7;
   -webkit-transform: scale(0.85);
-          transform: scale(0.85);
+  transform: scale(0.85);
   -webkit-filter: blur(5px);
-          filter: blur(5px);
-  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s, transform 0.3s, -webkit-filter 0.3s, filter 0.3s;
-          transition: opacity 0.3s, transform 0.3s, filter 0.3s;
+  filter: blur(5px);
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s, transform 0.3s,
+    -webkit-filter 0.3s, filter 0.3s;
+  transition: opacity 0.3s, transform 0.3s, filter 0.3s;
 }
 
 /* brighten selected image */
 .carousel-cell.is-selected img {
   opacity: 1;
   -webkit-transform: scale(1);
-          transform: scale(1);
+  transform: scale(1);
   -webkit-filter: none;
-          filter: none;
+  filter: none;
 }
 
 @media screen and (max-height: 1000px) {
-    .carousel-item {
+  .carousel-item {
     height: 24rem;
-    }}
+  }
+}
+
+/* Responsive textarea */
+.textinput {
+  float: left;
+  width: 100%;
+  min-height: 75px;
+  outline: none;
+  resize: none;
+  border: 1px solid grey;
+}
+
+/* .comment-message {
+    float: left;
+    width: 100%;
+    height: auto;
+  } */
+
+  /* form {
+    position: relative;
+    display: inline-block;
+ }
+ 
+ form textarea {
+     min-width: 140px;
+ }
+ 
+ form p {
+     margin: 0;
+     padding: 0;
+     display: block;
+     text-align: left;
+ } */
